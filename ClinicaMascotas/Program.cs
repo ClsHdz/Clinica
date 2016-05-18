@@ -16,7 +16,10 @@ namespace ClinicaMascotas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Login login = new Login();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
+                Application.Run(new Form1());
         }
     }
 }

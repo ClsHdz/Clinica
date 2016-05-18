@@ -38,6 +38,7 @@ namespace ClinicaMascotas
         private String raza;
         private String chip;
         private char sexo;
+        private DataTable propietarios = new DataTable();
         public NewPet()
         {
             InitializeComponent();
@@ -73,7 +74,8 @@ namespace ClinicaMascotas
                 sentencia_SQL = "Select dni from usuarios where dni like '" + propietario + "';";
                 comando = new MySqlCommand(sentencia_SQL, conn);
                 resultado = comando.ExecuteReader();
-                if (resultado != null)
+                propietarios.Load(resultado);
+                if (propietarios.Rows.Count != 0)
                 {
                     conn.Close();
                     conn = new MySqlConnection(connStr);
@@ -87,13 +89,17 @@ namespace ClinicaMascotas
                     especie = textBox8.Text;
                     fechaAño = textBox9.Text;
                     fechaMes = textBox10.Text;
-                    if (comboBox1.DisplayMember == "Macho")
+                    if (comboBox1.SelectedItem == "Macho")
                     {
                         sexo = 'M';
                     }
-                    else
+                    else if (comboBox1.SelectedItem == "Hembra")
                     {
                         sexo = 'F';
+                    }
+                    else
+                    {
+                        sexo = 'I';
                     }
                     propietario.ToUpper();
                     nombre = nombre.ToUpper();

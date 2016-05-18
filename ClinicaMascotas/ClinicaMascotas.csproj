@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirMascota.Designer.cs">
+      <DependentUpon>AñadirMascota.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AñadirMascota.resx">
+      <DependentUpon>AñadirMascota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosMascota.resx">
       <DependentUpon>DatosMascota.cs</DependentUpon>
     </EmbeddedResource>

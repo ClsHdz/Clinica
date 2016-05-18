@@ -45,6 +45,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +72,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -80,7 +80,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 26);
             this.label3.TabIndex = 4;
-            this.label3.Text = "1";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -98,7 +97,6 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 26);
             this.label5.TabIndex = 6;
-            this.label5.Text = "1";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -116,7 +114,6 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 26);
             this.label7.TabIndex = 8;
-            this.label7.Text = "1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -134,7 +131,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 26);
             this.label9.TabIndex = 10;
-            this.label9.Text = "1";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -152,7 +148,6 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 26);
             this.label11.TabIndex = 12;
-            this.label11.Text = "1";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -170,7 +165,6 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 26);
             this.label13.TabIndex = 14;
-            this.label13.Text = "1";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -188,7 +182,6 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 26);
             this.label15.TabIndex = 16;
-            this.label15.Text = "1";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
@@ -197,14 +190,25 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 26);
             this.label16.TabIndex = 15;
-            this.label16.Text = "Nombre:";
+            this.label16.Text = "Chip:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 346);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(393, 21);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Añadir visita";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DatosMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 432);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
@@ -234,20 +238,21 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button1;
     }
 }

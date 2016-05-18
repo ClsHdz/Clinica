@@ -38,26 +38,49 @@ namespace ClinicaMascotas
         private char sexo;
         private DataTable visitas = new DataTable();
         public String mascotaElegida;
-        public DatosMascota()
+
+        public void cargaVisitas()
         {
-            InitializeComponent();
+            mascotaElegida = this.label9.Text;
+
             connStr = "Server=localhost; Database=clinica; Uid=root; Pwd=root; Port=3306";
             conn = new MySqlConnection(connStr);
             conn.Open();
             DataTable DT = (DataTable)dataGridView1.DataSource;
             if (DT != null)
                 DT.Clear();
-            sentencia_SQL = "Select hora, descripcion from visitas where id = '"+mascotaElegida+"'";
+            sentencia_SQL = "Select hora, descripcion from visitas where mascota like " + mascotaElegida + ";";
             comando = new MySqlCommand(sentencia_SQL, conn);
             resultado = comando.ExecuteReader();
             visitas.Load(resultado);
             dataGridView1.DataSource = visitas;
+
+
+
             conn.Close();
+        }
+
+        public DatosMascota()
+        {
+            InitializeComponent();
+
+           
+            
+//            conn.Open();
+//            sentencia_SQL = "Select * from mascotas where id = '" + mascotaElegida + "'";
+//            comando = new MySqlCommand(sentencia_SQL, conn);
+//            resultado = comando.ExecuteReader();
         }
 
         private void DatosMascota_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AñadirMascota n = new AñadirMascota();
+            n.Show();
         }
     }
 }

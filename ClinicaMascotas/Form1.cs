@@ -27,14 +27,14 @@ namespace ClinicaMascotas
         private String nombre;
         private DataTable mascotas = new DataTable();
         private DataTable usuarios = new DataTable();
-        Login m = new Login();
+        
 
         public Form1()
         {
             InitializeComponent();
             connStr = "Server=localhost; Database=clinica; Uid=root; Pwd=root; Port=3306";
             conn = new MySqlConnection(connStr);
-            conn.Open();
+            
    //         m.Show();
             
    //         if (m.log == false)
@@ -70,12 +70,8 @@ namespace ClinicaMascotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
-                
+
+            conn.Open();
                 DataTable DT = (DataTable)dataGridView1.DataSource;
                 if (DT != null)
                     DT.Clear();
@@ -96,41 +92,29 @@ namespace ClinicaMascotas
                 dataGridView1.DataSource = usuarios;
                 
                 //           dataGridView1.Rows.Clear();
-            }
+                conn.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
+            
                 Form2 n = new Form2();
                 n.Show();
-            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
+            
                 Form3 n = new Form3();
                 n.Show();
-            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
-                
+
+            conn.Open();
                 DataTable DT = (DataTable)dataGridView2.DataSource;
                 if (DT != null)
                     DT.Clear();
@@ -149,39 +133,39 @@ namespace ClinicaMascotas
                 resultado = comando.ExecuteReader();
                 mascotas.Load(resultado);
                 dataGridView2.DataSource = mascotas;
-                
-            }
+                conn.Close();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
+           
                 NewPet n = new NewPet();
                 n.Show();
-            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (m.log == false)
-            {
-            }
-            else
-            {
+           
                 Form4 n = new Form4();
                 n.Show();
-            }
+            
         }
 
         private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             DatosMascota n = new DatosMascota();
-            n.mascotaElegida = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            n.label9.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            n.label2.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            n.label7.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            n.label3.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            n.label5.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            n.label15.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            n.label11.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+            n.label13.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+            n.cargaVisitas();
             n.Show();
         }
     }
