@@ -80,7 +80,25 @@ namespace ClinicaMascotas
         private void button1_Click(object sender, EventArgs e)
         {
             AñadirMascota n = new AñadirMascota();
+            n.mascota = this.label9.Text;
             n.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            DataTable DT = (DataTable)dataGridView1.DataSource;
+            if (DT != null)
+                DT.Clear();
+            sentencia_SQL = "Select hora, descripcion from visitas where mascota like " + mascotaElegida + ";";
+            comando = new MySqlCommand(sentencia_SQL, conn);
+            resultado = comando.ExecuteReader();
+            visitas.Load(resultado);
+            dataGridView1.DataSource = visitas;
+
+
+
+            conn.Close();
         }
     }
 }

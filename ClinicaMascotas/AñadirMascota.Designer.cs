@@ -64,6 +64,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(122, 85);
+            this.textBox1.MaxLength = 2;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(26, 20);
             this.textBox1.TabIndex = 2;
@@ -79,6 +80,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(165, 85);
+            this.textBox3.MaxLength = 2;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(26, 20);
             this.textBox3.TabIndex = 4;
@@ -86,6 +88,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(211, 85);
+            this.textBox4.MaxLength = 2;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(26, 20);
             this.textBox4.TabIndex = 5;
@@ -93,6 +96,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(211, 46);
+            this.textBox5.MaxLength = 4;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(40, 20);
             this.textBox5.TabIndex = 9;
@@ -100,6 +104,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(165, 46);
+            this.textBox6.MaxLength = 2;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(26, 20);
             this.textBox6.TabIndex = 8;
@@ -107,6 +112,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(122, 46);
+            this.textBox7.MaxLength = 2;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(26, 20);
             this.textBox7.TabIndex = 7;
@@ -127,6 +133,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 

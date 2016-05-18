@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ClinicaMascotas
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form                                       //Usuario: uno Contraseña: uno
     {
         //Parametros de la conexion
         private string connStr;
